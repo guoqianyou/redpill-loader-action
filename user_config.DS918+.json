@@ -12,7 +12,6 @@
   },
    "extensions": [
      "pocopico.aacraid",
-     "pocopico.aic94xx",
      "pocopico.igb",
      "pocopico.mpt2sas",
      "pocopico.mpt3sas",
