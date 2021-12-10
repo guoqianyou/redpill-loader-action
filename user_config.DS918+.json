@@ -10,5 +10,13 @@
     "internalportcfg" : "0x0fff",
     "esataportcfg" : "0xf000"
   },
+   "extensions": [
+     "aacraid",
+     "aic94xx",
+     "igb",
+     "mpt2sas",
+     "mpt3sas",
+     "mptsas"
+  ],
   "ramdisk_copy": {}
 }
