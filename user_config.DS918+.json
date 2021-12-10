@@ -7,6 +7,8 @@
   },
   "synoinfo": {
     "maxdisks" : "16",
+    "internalportcfg" : "0x0fff",
+    "esataportcfg" : "0xf000",
     "supportsystemperature": "no",
     "supportsystempwarning": "no"
   },
