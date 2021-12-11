@@ -8,12 +8,5 @@
   "synoinfo": {
     "maxdisks" : "16"
   },
-   "extensions": [
-     "pocopico.aacraid",
-     "pocopico.igb",
-     "pocopico.mpt2sas",
-     "pocopico.mpt3sas",
-     "pocopico.mptsas"
-  ],
   "ramdisk_copy": {}
 }
