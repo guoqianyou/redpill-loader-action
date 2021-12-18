@@ -6,9 +6,7 @@
     "mac1": "d05099a9a7b3"
   },
   "synoinfo": {
-    "maxdisks" : "16",
-    "internalportcfg" : "0x7FFF",
-    "esataportcfg" : "0x0"
+    "internalportcfg" : "0xFFF"
    },
   "ramdisk_copy": {}
 }
