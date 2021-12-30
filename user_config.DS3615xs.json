@@ -3,10 +3,15 @@
     "vid": "0x0781",
     "pid": "0x5567",
     "sn": "1780PDN123456",
-    "mac1": "d05099a9a7b3"
+    "mac1": "d05099a9a7b3",
+    "SataPortMap":"48",
+    "DiskIdxMap":"00",
+    "SasIdxMap":"1"
   },
   "synoinfo": {
-    "internalportcfg" : "0xFFF"
+    "internalportcfg": "0xffff",
+    "esataportcfg": "0xff000",
+    "maxdisks": "12"
    },
   "ramdisk_copy": {}
 }
