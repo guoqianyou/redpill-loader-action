@@ -4,12 +4,14 @@
 sudo apt-get update && sudo apt-get install --yes --no-install-recommends ca-certificates build-essential git libssl-dev curl cpio bspatch vim gettext bc bison flex dosfstools kmod jq
 
 dsmodel="DS3615xs"
+osid="ds3615xs"
 os_version="42661"
+workpath="DS3615xs-7.1"
 pat_address="https://global.download.synology.com/download/DSM/release/7.1/"${os_version}"/DSM_"${dsmodel}"_"${os_version}".pat"
 root=`pwd`
-mkdir DS3615xs-7.1
+mkdir $workpath
 mkdir output
-cd DS3615xs-7.1
+cd $workpath
 
 # download redpill
 git clone --depth=1 https://github.com/RedPill-TTG/redpill-lkm.git
@@ -40,6 +42,8 @@ cp ../usr/lib/libcurl.so.4 ../usr/lib/libmbedcrypto.so.5 ../usr/lib/libmbedtls.s
 ln -s scemd syno_extract_system_patch
 
 curl --location  ${pat_address} --output ${os_version}.pat
+
+mkdir output-pat
 
 sudo LD_LIBRARY_PATH=. ./syno_extract_system_patch ${os_version}.pat output-pat
 
