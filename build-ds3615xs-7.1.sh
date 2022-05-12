@@ -47,7 +47,7 @@ mkdir output-pat
 
 sudo LD_LIBRARY_PATH=. ./syno_extract_system_patch ${os_version}.pat output-pat
 
-cd output-pat && sudo tar -zcvf ${os_version}.pat * && sudo chmod 777 ${os_version}.pat
+cd output-pat && sudo tar -zcvf ${os_version}.pat ./ && sudo chmod 777 ${os_version}.pat
 read -a os_sha256 <<< $(sha256sum ${os_version}.pat)
 echo $os_sha256
 cp ${os_version}.pat ${root}/${workpath}/redpill-load/cache/${osid}_${os_version}.pat
@@ -62,5 +62,6 @@ cp -f ${root}/user_config.DS3615xs.json ./user_config.json
 ./ext-manager.sh add https://raw.githubusercontent.com/pocopico/rp-ext/master/mpt2sas/rpext-index.json
 ./ext-manager.sh add https://raw.githubusercontent.com/jumkey/redpill-load/develop/redpill-acpid/rpext-index.json
 sudo ./build-loader.sh ${dsmodel} '7.1.0-'${os_version}
+ls -lh images
 mv images/redpill-${dsmodel}*.img ${root}/output/
 cd ${root}
