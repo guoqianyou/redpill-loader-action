@@ -61,7 +61,7 @@ cp -rf ${root}/config/* ./config
 # 7.1.0 must add this ext
 ./ext-manager.sh add https://raw.githubusercontent.com/jumkey/redpill-load/develop/redpill-misc/rpext-index.json  
 ./ext-manager.sh add https://raw.githubusercontent.com/pocopico/rp-ext/master/mpt2sas/rpext-index.json
-./ext-manager.sh add https://raw.githubusercontent.com/jumkey/redpill-load/develop/redpill-acpid/rpext-index.json
+# ./ext-manager.sh add https://raw.githubusercontent.com/jumkey/redpill-load/develop/redpill-acpid/rpext-index.json
 ls -l cache
 echo "kaishi start "
 sudo ./build-loader.sh ${dsmodel} '7.1.0-'${os_version}
