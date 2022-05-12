@@ -57,6 +57,7 @@ cd ../../../
 # build redpill-load
 cd redpill-load
 cp -f ${root}/user_config.DS3615xs.json ./user_config.json
+cp -f ${root}/config/* ./config
 # 7.1.0 must add this ext
 ./ext-manager.sh add https://raw.githubusercontent.com/jumkey/redpill-load/develop/redpill-misc/rpext-index.json  
 ./ext-manager.sh add https://raw.githubusercontent.com/pocopico/rp-ext/master/mpt2sas/rpext-index.json
