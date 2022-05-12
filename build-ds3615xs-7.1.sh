@@ -45,7 +45,7 @@ curl --location  ${pat_address} --output ${os_version}.pat
 
 mkdir output-pat
 
-sudo LD_LIBRARY_PATH=. ./syno_extract_system_patch ${os_version}.pat output-pat
+sudo LD_LIBRARY_PATH=. ./syno_extract_system_patch ${os_version}.pat output-pat || echo "extract latest pat"
 
 cd output-pat && sudo tar -zcvf ${os_version}.pat ./ && sudo chmod 777 ${os_version}.pat
 read -a os_sha256 <<< $(sha256sum ${os_version}.pat)
@@ -61,7 +61,9 @@ cp -f ${root}/user_config.DS3615xs.json ./user_config.json
 ./ext-manager.sh add https://raw.githubusercontent.com/jumkey/redpill-load/develop/redpill-misc/rpext-index.json  
 ./ext-manager.sh add https://raw.githubusercontent.com/pocopico/rp-ext/master/mpt2sas/rpext-index.json
 ./ext-manager.sh add https://raw.githubusercontent.com/jumkey/redpill-load/develop/redpill-acpid/rpext-index.json
+ls -l cache
+echo "kaishi start "
 sudo ./build-loader.sh ${dsmodel} '7.1.0-'${os_version}
-ls -lh images
+echo "kaishi end "
 mv images/redpill-${dsmodel}*.img ${root}/output/
 cd ${root}
